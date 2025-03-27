@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-#wrapper{
+.wrapper{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,19 +36,19 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    /* gap: 0.5rem; */
 }
 
 #posts a{
-    width: 31%;
-    height: 250px;
-    padding: 10px;
-    border: 2px solid;
-    border-radius: 10px;
+    width: 32%;
+    height: 350px;
+    padding: 8px;
+    /* border: 2px solid black; */
 }
 
 #posts a img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 10px;
 }
