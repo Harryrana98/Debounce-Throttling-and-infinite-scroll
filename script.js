@@ -17,24 +17,28 @@ async function getPhotos() {
   const response = await fetch(URL);
   const result = await response.json();
   displayPhotos(result);
+  // console.log(displayPhotos(result));
+  
 }
 
 function displayPhotos(arr) {
   const fragment = document.createDocumentFragment();
+  
   arr.forEach((object) => {
     const anchor = document.createElement("a");
     anchor.href = object.links.self;
-
+    
     const img = document.createElement("img");
     img.src = object.urls.regular;
-
+    
     anchor.append(img);
     fragment.append(anchor);
   });
-
+  
   postsDiv.append(fragment);
   loader.style.display = "none";
   loaded = true;
+  // console.log(postsDiv);
 }
 
 window.addEventListener("scroll", () => {
@@ -46,4 +50,4 @@ window.addEventListener("scroll", () => {
   }
 });
 
-getPhotos();
+getPhotos();  //initial photos 
